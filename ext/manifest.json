@@ -1,0 +1,28 @@
+{
+  "manifest_version": 2,
+  "name": "Auto Clicker",
+  "version": "1.0",
+  "description": "Search and click a button in a specific pattern every 10 seconds.",
+  "permissions": [
+    "tabs",
+    "http://*/*",
+    "https://*/*",
+    "activeTab",
+    "webNavigation"
+  ],
+  "background": {
+    "scripts": ["background.js"]
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "https://learn.zone01oujda.ma/intra/oujda/piscine-go/quest-10/*"
+      ],
+      "js": ["content.js"],
+      "run_at": "document_end"
+    }
+  ],
+  "icons": {
+    "48": "icons/icon.png"
+  }
+}
